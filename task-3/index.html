@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+  <title>Task 3</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <img src="images/logo.svg" class="logo">
+  <div class="row">
+    <div class="picdiv">
+    </div>
+    <section>
+      <h1><span>we're</span><br> coming <br> soon</h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store. 
+         Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <section>
+      <form name="apparel" action="" onsubmit="return EmailValidate()" method="post" class="col-lg-6">
+        <input type="text" name="Email" class="in1" placeholder="Email Address" id="m">
+        <button class="b1" name="Submit" onclick="EmailValidate()"><img src="images/icon-arrow.svg" class="arrow"></button>
+      </form>
+      <div class = "d1" id="merror"></div>
+      <span class="show"><img src="images/icon-error.svg"></span>
+      </section>
+    </section> 
+  </div>	
+  <script src="script.js"></script>
+</body>
+</html>
