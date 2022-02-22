@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 7</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/3dc037e5d7.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="lightbg">
+        <header class="light first">
+            <h1>Where in the world?</h1>
+            <input type="checkbox" id="check" name="check">
+            <label for="check"><i class="far fa-moon">Dark Mode</i></label>
+        </header>
+        <div class="container">
+            <header>
+                <span><i class="fas fa-search fa-lg"></i></span>
+                <input type="text" id="inp" class="light" placeholder="Search for a country...">
+                <select class="light">
+                    <option value="none">Filter by region</option> 
+                    <option value="africa">Africa</option>
+                    <option value="americas">Americas</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>  
+            </header>
+            <section class="flagGrid"></section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
