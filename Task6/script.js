@@ -60,9 +60,9 @@ function createCountry(x){
     x.forEach((e) => {
         let link = document.createElement("a");
         link.innerHTML = 
-        `<section onclick="sessionStorage.setItem('name', '${e.name}');">
-        <img src="${e.flag}">
-        <h2>${e.name}</h2>
+        `<section onclick="sessionStorage.setItem('name', '${e.name.common}');">
+        <img src="${e.flags.png}">
+        <h2>${e.name.common}</h2>
         <p>
             <span>Population: </span>${e.population.toLocaleString()}<br>
             <span>Region: </span>${e.region}<br>
