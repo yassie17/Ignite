@@ -1,0 +1,339 @@
+*{
+    display: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+}
+.disp{
+    display: none;
+}
+header button{
+    position: absolute;
+    right: 0;
+}
+h1,h3:nth-child(1),button{
+    text-transform: uppercase;
+}
+.container{
+    display: grid;
+    grid-template-rows: 600px;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h"
+      "i"
+      "j";
+}
+h1{
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: hsl(0, 0%, 100%);
+}
+img:nth-child(1){
+    text-align: left;
+    margin: 40px;
+}
+.arrow{
+    position: absolute;
+    top: 35%;
+    left: 48%;
+}
+
+article{
+    display: grid;
+    padding: 30px;
+    text-align: center;
+    color:  hsl(232, 10%, 55%);
+    text-indent: 5px;
+    text-justify: auto;
+    line-height: 1.5;
+    font-weight: 700;
+}
+p{
+    margin: 25px 0;
+}
+h2{
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    text-decoration: bolder;
+    font-size: 30px;
+    line-height: normal;
+    color: hsl(212, 27%, 19%);
+}
+picture h2:nth-child(2){
+    color: hsl(198, 62%, 26%);
+}
+picture h2:nth-child(1){
+    color: hsl(167, 40%, 24%);
+}
+button{
+    font-size: 20px;
+    background: transparent;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    border: none;
+    color: hsl(212, 27%, 19%);
+} 
+.red{
+    text-decoration: underline hsl(12, 84%, 90%) 6px;
+}
+.red:hover {
+    text-decoration: underline hsl(7, 99%, 70%) 6px;
+}
+  
+.yellow {
+    text-decoration: underline hsl(51, 87%, 85%) 6px;
+  
+} 
+.yellow:hover {
+    text-decoration: underline hsl(51, 100%, 49%) 6px;
+}
+picture{
+    position: relative;
+}
+picture section{
+    position: absolute;
+    bottom: 3%;
+    padding: 35px;
+    text-align: center;
+}
+picture section p{
+    margin-top: 50px;
+    line-height: 1.5;
+}
+h3:nth-child(1){
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+article section{
+    margin-bottom: 25px;
+    color: hsl(213, 9%, 39%);
+}
+article h3:not(h3:nth-child(1)){
+    color: hsl(212, 27%, 19%);
+    font-weight: bolder;
+    font-family: 'Fraunces', serif;
+}
+h4{
+    color: hsl(210, 4%, 67%);
+    font-size: smaller;
+}
+article section img{
+    border-radius: 150px;
+    width: 100px;
+}
+h3:not(h3:nth-child(1)){
+    margin: 25px 0 5px 0;
+}
+footer{
+    text-align: center;
+}
+footer h2{
+    color: hsl(168, 34%, 41%);
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 50px;
+}
+footer nav{
+    margin-bottom: 70px;
+}
+.social a{
+    margin: 0 -25px;
+}
+.info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+picture img{
+    width: 100%;
+    display: block;
+}
+.item0 {
+    background: url("images/mobile/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+    grid-area: a;
+}
+.item1 {
+    grid-area: b;
+}
+.item2 {
+    grid-area: c;
+}
+.item3 {
+    grid-area: d;
+}
+.item4 {
+    grid-area: e;
+}
+.item5 {
+    grid-area: f;
+    color: hsl(167, 40%, 24%);
+}
+.item6 {
+    grid-area: g;
+    color: hsl(198, 62%, 26%)
+}
+.item7 {
+    grid-area: h;
+    display: grid;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+}
+.item8 {
+    grid-area: i;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.item9 {
+    grid-area: j;
+    display: grid;
+    color: hsl(168, 34%, 41%);
+    background-color: hsl(165,44%,69%);
+} 
+@media (max-width: 765px){
+    .header-nav {
+        clip-path: polygon(85% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+        width: 75%;
+        height: 45%;
+        position: absolute;
+        right: 12.5%;
+        top: 8.5%;
+        background-color: hsl(0, 0%, 100%);
+        z-index: 2;
+    }
+    .arrow{
+        z-index: 1;
+    }
+    li{
+        list-style: none;
+        text-align: center;
+        height: 50px;
+        margin: 20px 150px;        
+    }
+    li:nth-child(1){
+        margin-top: 100px;
+    }
+    li:hover{
+        background-color: hsl(51, 100%, 49%);
+        border-radius: 35px;
+        position: relative;
+    }
+    li:nth-child(4){
+        background-color: hsl(51, 100%, 49%);
+        border-radius: 35px;
+    }
+    .bef{
+        color: hsl(213, 9%, 39%);
+        line-height: 2.5;
+    }
+    .bef a:hover{
+        color: hsl(212, 27%, 19%);
+    }
+}
+@media only screen and (min-width: 767px) {
+    li:nth-child(4){
+        background-color: hsl(0,  0%, 100%);
+        border-radius: 35px;
+    }
+    .disp{
+        display: block;
+    }
+    .header-nav {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+    .bef{
+        color: hsl(0, 0%, 100%);
+    }
+    .act{
+        color: hsl(212, 27%, 19%);
+    }
+    li{
+        list-style: none;
+        float: left;
+        padding: 10px;
+        margin: 0px;
+        margin-left: 20px;
+    }
+    li:hover{
+        background-color: hsla(0, 0%, 100%,0.2);
+        border-radius: 35px;
+    }
+    .act:hover{
+        color: hsl(0, 0%, 100%);
+    }
+    header button{
+        display: none;
+    }
+    .container{
+        grid-template-rows: 700px repeat(2,1fr) 500px;
+        grid-template-areas:
+        "a a"
+        "c b"
+        "d e"
+        "f g"
+        "h h"
+        "i i"
+        "j j"
+    }
+    picture section{
+        bottom: 0;
+        padding: 35px;
+        text-align: center;
+    }
+    picture section p{
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+    .info{
+        grid-template-columns: repeat(3,150px);
+        justify-self: center;
+    }
+    picture img{
+        width: 100%;
+        height: 100%;
+    }
+    .item0 {
+        background: url("images/desktop/image-header.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 700px;
+    }
+    .item7 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        gap: 10px;
+        grid-template-areas:
+        "client client client"
+        "em th jen";
+    }
+    .item8 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 250px;
+    }
+    .client{
+        grid-area: client;
+    }
+    .em{
+        grid-area: em;
+    }
+    .th{
+        grid-area: th;
+    }
+    .jen{
+        grid-area: jen;
+    }
+}
