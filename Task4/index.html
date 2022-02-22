@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="sty.css">
+    </head>
+    <body>
+        <h1>spli<br>tter</h1>
+        <div class="container">
+            <form novalidate>
+                <fieldset class="col-lg-6 col-sm-12">
+                    <label for="bill">Bill</label>
+                    <br>
+                    <div>
+                        <i><img src="images/icon-dollar.svg"></i>
+                        <input type="number" id="bill" placeholder="0" min="0.1">
+                    </div>
+                    <label>Select Tip %</label>
+                    <br>
+                    <input type="radio" id="r1" name="tip" value="5" class="selected">
+                    <label for="r1" class="tips">5%</label>
+                    <input type="radio" id="r2" name="tip" value="10">
+                    <label for="r2" class="tips">10%</label>
+                    <input type="radio" id="r3" name="tip" value="15"> 
+                    <label for="r3" class="tips">15%</label>
+                    <input type="radio" id="r4" name="tip" value="25">
+                    <label for="r4" class="tips">25%</label>
+                    <input type="radio" id="r5" name="tip" value="50">
+                    <label for="r5" class="tips">50%</label>
+                    <label class="tips cusTip"><input id="custom" name="cust" type="number" placeholder="Custom"></label>
+                    <br>
+                    <label for="people">Number of People</label>
+                    <span id="error" class="err"></span>
+                    <br>
+                    <div>
+                        <i><img src="images/icon-person.svg"></i>
+                        <input name="inv" type="number" id="people" min="1" placeholder="0">
+                    </div>
+                </fieldset>
+                <fieldset class="col-lg-6 col-sm-12">
+                    <label>Tip Amount <br><b>/ person</b></label>
+                    <label class="out" id="tipper">$0.00</label>
+                    <br>
+                    <label>Total <br><b>/ person</b></label>
+                    <label class="out" id="totper">$0.00</label>
+                    <br>
+                    <input type="reset" id="res">
+                </fieldset>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

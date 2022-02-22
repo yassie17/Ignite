@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(186, 14%, 43%);
+    font-weight: bolder;
+}
+h1{
+    margin: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.container{
+    border: none;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+.container div{
+    position: relative;
+}
+input[Type='number']:not(label input){
+    width: 100%;
+    height: 50px;
+    background-color: hsl(180, 12%, 90%);
+    border: none;
+    text-align: right;
+    font-size: 24px;
+    margin: 25px 0px;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px;
+}
+i{
+    position: absolute;
+    top: 30%;
+    left: 1%;
+}
+fieldset{
+    border: none;
+    border-radius: 10px;
+}
+fieldset:nth-child(2){
+    background-color: hsl(183, 100%, 15%);
+    padding: 25px;
+    color: hsl(189, 41%, 97%);
+    position: relative;
+}
+b{
+    font-size: 15px;
+    color: hsl(186, 14%, 43%);
+}
+.out{
+    color: hsl(172, 67%, 45%);
+    position: absolute;
+    right: 25px;
+    font-size: larger;
+}
+input[Type='reset']{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px;
+    font-size: large;
+    border: none;
+    background-color: hsl(181,30%,28%);
+    color: hsl(183, 100%, 15%);
+}
+input[Type='radio']{
+    display: none;
+}
+.tips{
+    float: left;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    color: hsl(189, 41%, 97%);
+    text-align: center;
+    border: none;
+    height: 50px;
+    padding: 5px;
+}
+.selectedL{
+    background-color: hsl(172, 67%, 45%);
+}
+.cusTip{
+    background-color: hsl(180, 12%, 90%);
+    padding-left: 15px;
+}
+.cusTip input{
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    background: transparent;
+    border: none;
+}
+.form{
+    background-color: hsl(172, 67%, 45%) !important;
+}
+.inv{
+   border: 1px solid orangered !important;
+}
+.err{
+    float: right;
+    color: orangered;
+    font-size: 15px;
+    margin-top: 10px;
+}
+@media (min-width: 768px){
+    .container{
+        width: 90%;
+        height: 63vh;
+        margin-left: 5%;
+    }
+    .col-lg-6{
+        float: left;
+	    width: 50%;
+    }
+    .tips{
+        width: 31.3333%;
+        margin: 1%;
+    }
+    fieldset:nth-child(1){
+        padding: 0px 25px;
+    }
+    fieldset:nth-child(2){
+        height: 56vh;
+        position: relative;
+    }
+    input[Type='reset']{
+        position: absolute;
+        bottom: 25px;
+        width: 85%;
+    }
+    
+}
+
+@media (max-width: 767px){
+    .container{
+        width: 100%;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        height: 90vh;
+    }
+    .col-sm-12{
+	    float:  left;
+	    width: 100%;
+    }
+    .tips{
+        width: 48%;
+        margin: 1%;
+    }
+}
