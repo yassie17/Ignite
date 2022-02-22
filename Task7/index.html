@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+               <img src="images/logo-bonus.svg" alt="Game Logo">
+            </div>
+            <div>
+                <p>Score</p>
+                <p id="score">0</p>
+            </div>
+        </header>
+        <main>
+            <div class="subContainer">
+                <div class="sub-container__first-row">
+                    <button id="scissors"><img src="images/icon-scissors.svg" alt="scissors"></button>
+                </div>
+                <div class="sub-container__second-row">
+                    <button id="spock"><img src="images/icon-spock.svg" alt="spock"></button>
+                    <button id="paper"><img src="images/icon-paper.svg" alt="paper"></button>
+                </div>
+                <div class="sub-container__third-row">
+                    <button id="lizard"><img src="images/icon-lizard.svg" alt="lizard"></button>
+                    <button id="rock"><img src="images/icon-rock.svg" alt="rock"></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="playing-container display--none">
+        <div class="choice" id="my-choice">
+            <h3>YOU PICKED</h3>
+            <span> 
+                <img id="myPickImage" alt="Player Choice">
+            </span>
+        </div>
+        <div id="result">
+            <p id="resultMsg">...</p>
+            <button id="playAgainBtn">PLAY AGAIN</button>
+        </div>
+        <div class="choice" id="house-choice">
+            <h3>THE HOUSE PICKED</h3>
+            <span class="span--inactive">
+                <img id="housePickImage">
+            </span>
+        </div>
+    </div>
+    <div class="rules-overlay display--none">
+        <div class="img__container">
+            <h2>RULES</h2>
+            <img src="images/image-rules-bonus.svg" alt="rules">
+            <button><img src="images/icon-close.svg" class="cross" alt="close button"></button>
+        </div>
+    </div>
+    <button class="rule">Rules</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
