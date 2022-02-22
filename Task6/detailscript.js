@@ -1,54 +1,38 @@
-let name = sessionStorage.getItem("name");
+let cname = sessionStorage.getItem("name");
 let x = "";
 let lightbg = document.querySelectorAll(".lightbg");
 let light = document.querySelectorAll(".light");
 let arr = document.querySelectorAll("a");
 
-fetch(`https://restcountries.eu/rest/v2/name/${name}`).then((response) => {
+fetch(`https://restcountries.com/v3.1/name/${cname}`).then((response) => {
     return response.json();
 }).then((response) => {
+    console.log(response);
     details(response);
 });
 
 function details(x){
     x.forEach((e) => {
+    console.log(JSON.stringify(e.currencies));
     let section = document.querySelector("section");
-    let currencies = e.currencies;
-    let languages = e.languages;
+    let tld = e.tld;
     let borders = e.borders;
-    
-    x = `<img src="${e.flag}"><section>
-        <h2 class="h">${e.name}</h2><p><span>Native Name: </span>${e.nativeName}<br>
+    let borname = [];
+    x = `<img src="${e.flags.png}"><section>
+        <h2 class="h">${e.name.common}</h2><p>
         <span>Population: </span>${e.population.toLocaleString()}<br>
         <span>Region: </span>${e.region}<br><span>Sub Region: </span>${e.subregion}<br>
         <span>Capital: </span>${e.capital}</p></section><section><p>
-        <span>Top Level Domain: </span>${e.topLevelDomain}<br><span>Currencies: </span>`;
-    for(let i=0; i<currencies.length; i++){
-        if(i === 0)
-            x+= currencies[i].name;
-        else
-            x+= ", "+currencies[i].name;
-    }
-    x+= `<br>
-        <span>Languages: </span>`;
-    for(let i=0; i<languages.length; i++){
-        if(i === 0)
-            x+= languages[i].name;
-        else
-            x+= ", "+languages[i].name;
-    }
-    x+= `</p></section><section>
-        <h3>Border Countries:</h3><ul>`;
-    for(let i=0; i<borders.length; i++){
-        fetch(`https://restcountries.eu/rest/v2/alpha/${borders[i]}`).then((response) => {
-            return response.json();
-        }).then((response) => {
-            x+=`<li class="light">${response.name}</li>`;
-            if(i === borders.length-1)
-                x+=`</ul></section>`;
-            section.innerHTML = x;
-        });   
-    }});
+        <span>Top Level Domain: </span>`;
+        for(let i=0; i<tld.length; i++){
+            if(i === 0)
+                x+= tld[i];
+            else
+                x+= ", "+tld[i];
+        }
+    
+    section.innerHTML = x;
+});
 }
 
 document.querySelector("input[Type='checkbox']").addEventListener('change',function(){
