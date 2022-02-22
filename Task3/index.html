@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 4</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="darkbg">
+        <header class="darkimg">
+            <h1>To do</h1>
+            <buton onclick="themeChanger()"><img id="theme" src="images/icon-sun.svg"></buton>
+            <form action="" method="get" class="dark">
+                <input type="button" onclick="add()" class="round dark">
+                <input type="text" class="dark" id="input" placeholder="Create a new todo..">
+            </form>
+        </header>
+        <div class="container">
+            <ul id = "list">
+                <li class="dark check"><input type="checkbox" id="item1"><label for="item1"><div class="round dark checked"><img src="images/icon-check.svg"></div><span class="checkedText">Complete online JavaScript course</span><img src="images/icon-cross.svg"></label></li>
+                <li class="dark"><input type="checkbox" id="item2"><label for="item2"><div class="round dark"></div><span>Jog around the house 3x</span><img src="images/icon-cross.svg"></label></li>
+                <li class="dark"><input type="checkbox" id="item3"><label for="item3"><div class="round dark"></div><span>10 minutes mediation</span><img src="images/icon-cross.svg"></label></li>
+                <li class="dark"><input type="checkbox" id="item4"><label for="item4"><div class="round dark"></div><span>Read for 1 hour</span><img src="images/icon-cross.svg"></label></li>
+                <li class="dark"><input type="checkbox" id="item5"><label for="item5"><div class="round dark"></div><span>Pick up groceries</span><img src="images/icon-cross.svg"></label></li>
+                <li class="dark"><input type="checkbox" id="item6"><label for="item6"><div class="round dark"></div><span>Complete todo App on Frontend Mentor</span><img src="images/icon-cross.svg"></label></li>
+            </ul>
+            <section class="dark">
+                <span id="count">5 items left</span>
+                <button class="">Clear Completed</button>
+            </section>
+            <section class="dark">
+                <ul class="filters">
+                    <li><input type="radio" name="filters" id="all"><label for="all" class="blue">All</label></li>
+                    <li><input type="radio" name="filters" id="active"><label for="active">Active</label></li>
+                    <li><input type="radio" name="filters" id="completed"><label for="completed">Completed</label></li>
+                </ul>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
