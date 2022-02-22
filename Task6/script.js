@@ -26,7 +26,7 @@ document.querySelector("select").addEventListener("change", (e) => {
 
 function fetchCountries(){
     container.innerHTML = "";
-    fetch("https://restcountries.eu/rest/v2/all").then(function (response) {
+    fetch("https://restcountries.com/v3.1/all").then(function (response) {
         return response.json();
     })
     .then(function (response) {
@@ -36,7 +36,7 @@ function fetchCountries(){
 
 function regionFilter(region) {
     container.innerHTML = "";
-    fetch(`https://restcountries.eu/rest/v2/region/${region}`).then((response) => {
+    fetch(`https://restcountries.com/v3.1/region/${region}`).then((response) => {
         return response.json();
     })
     .then((response) => {
@@ -46,7 +46,7 @@ function regionFilter(region) {
 
 function nameFilter(name) {
     container.innerHTML = "";
-    fetch(`https://restcountries.eu/rest/v2/name/${name}`).then((response) => {
+    fetch(`https://restcountries.com/v3.1/name/${name}`).then((response) => {
         return response.json();
     })
     .then((response) => {
