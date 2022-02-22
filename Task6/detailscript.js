@@ -13,7 +13,6 @@ fetch(`https://restcountries.com/v3.1/name/${cname}`).then((response) => {
 
 function details(x){
     x.forEach((e) => {
-    console.log(JSON.stringify(e.currencies));
     let section = document.querySelector("section");
     let tld = e.tld;
     let borders = e.borders;
